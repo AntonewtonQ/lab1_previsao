@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="container p-2  my-3 " id="weather-container">
+        
+        <h2>Previsão do tempo</h2>
+
+            <div class="input-group my-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-buildings"></i></span>
+                  <input type="text" class="form-control mx-1" id="city" placeholder="Sua Cidade Aqui" aria-label="Username" aria-describedby="basic-addon1">
+                  <button type="button" onclick="getWeather()" class="btn btn-success border rounded  btn-search mx-2 "><i class="bi bi-search"></i></button>
+                  <button type="button" onclick="shareWeather()" class="btn btn-danger border rounded  mx-2 "><i class="bi bi-share"></i></button>
+            </div>
+            
+
+
+            <div id="current-weather" class="bg-dark rounded d-lg-flex d-block justify-content-between  p-4">
+                
+                <div class="">
+                    <div id="city-date-icon">
+                        <span id='city-name' class="h1">
+                        </span>
+                        <span class="h1" id="country-name"></span>
+                        <br>
+                        <div class="">
+                            <span class="h1 mt-2 d-block " id="current-temp"></span>
+                            <img src="" id="weather-icon" width="150px" alt="">
+                            <p id="current-description"></p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="d-flex flex-column ">
+                    <p id="current-day"></p>
+                    <p id="current-humidity"></p>
+                    <p id="current-wind"></p>
+                    <p id="current-pressure"></p>
+
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div id="forecast-weather" class="my-2 ">
+                    
+                    <div id="forecast-cards" class="d-lg-flex d-block justify-content-between">
+                        <div class="bg-dark rounded p-2 forecast my-2">
+                            <div id="forecast1" class="card-body">
+                                <span class="card-title" id='forecast-date1'>
+                                </span>
+                                <span id='forecast-icon1'></span>
+                                <p class="card-text" id="forecast-temp1"></p>
+                                <p class="card-text" id="forecast-humidity1"></p>
+                            </div>
+                        </div>
+                        <div class="bg-dark rounded p-2 forecast my-2">
+                            <div id="forecast2" class="card-body">
+                                <span class="card-title" id='forecast-date2'>
+                                </span>
+                                <span id='forecast-icon2'></span>
+                                <p class="card-text" id="forecast-temp2"></p>
+                                <p class="card-text" id="forecast-humidity2"></p>
+                            </div>
+                        </div>
+                        <div class="bg-dark rounded p-2 forecast my-2">
+                            <div id="forecast3" class="card-body">
+                                <span class="card-title" id='forecast-date3'>
+                                </span>
+                                <span id='forecast-icon3'></span>
+                                <p class="card-text" id="forecast-temp3"></p>
+                                <p class="card-text" id="forecast-humidity3"></p>
+                            </div>
+                        </div>
+                        <div class="bg-dark rounded p-2 forecast my-2">
+                            <div id="forecast4" class="card-body">
+                                <span class="card-title" id='forecast-date4'>
+                                </span>
+                                <span id='forecast-icon4'></span>
+                                <p class="card-text" id="forecast-temp4"></p>
+                                <p class="card-text" id="forecast-humidity4"></p>
+                            </div>
+                        </div>
+                        <div class="bg-dark rounded p-2 forecast my-2">
+                            <div id="forecast5" class="card-body">
+                                <span class="card-title" id='forecast-date5'>
+                                </span>
+                                <span id='forecast-icon5'></span>
+                                <p class="card-text" id="forecast-temp5"></p>
+                                <p class="card-text" id="forecast-humidity5"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+                
+                      
+        
+              
+              
+                
+            
+        
+        
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
