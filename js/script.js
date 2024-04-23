@@ -195,24 +195,22 @@ function updateBackground(weatherCondition) {
     document.body.style.backgroundSize="cover";
 }
 
-/*
+function copyShareLink() {
+  // URL do seu aplicativo ou página da web
+  var url = window.location.href;
 
-function shareWeather(){
-    
-console.log(navigator.share);
-  // Check for Web Share api support
-  if (navigator.share) {
-    // Browser supports native share api
-    navigator.share({
-      text: 'Please read this great article: ',
-      url: 'https://www.google.com/'
-    }).then(() => {
-      console.log('Thanks for sharing!');
-    })
-      .catch((err) => console.error(err));
-  } else {
-    // Fallback
-    alert("The current browser does not support the share function. Please, manually share the link")
-  }
+  // Cria um elemento de input para armazenar o link compartilhável
+  var input = document.createElement('input');
+  input.setAttribute('value', url);
+  document.body.appendChild(input);
+
+  // Seleciona e copia o conteúdo do elemento de input
+  input.select();
+  document.execCommand('copy');
+
+  // Remove o elemento de input da página
+  document.body.removeChild(input);
+
+  // Exibe uma mensagem de confirmação para o usuário
+  alert('Link compartilhável copiado para a área de transferência: ' + url);
 }
-*/
